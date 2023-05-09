@@ -1,0 +1,74 @@
+header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-color);
+    position: sticky;
+    top: 0;
+}
+
+section {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    width: 30%;
+    cursor: pointer;
+    color: var(--main-color);
+}
+
+nav {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navegation {
+    width: 90%;
+}
+
+.navegation li {
+    font-family: 'Varela Round', sans-serif;
+}
+
+.social-icons {
+    width: 10%;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+li {
+    cursor: pointer;
+    padding: 10px;
+}
+
+li:hover {
+    color: var(--main-color);
+}
+
+li:active {
+    color: var(--accent-color);
+}
+
+.fa-brands {
+    font-size: 20px;
+    color: var(--accent-color);
+}
+
+.material-icons {
+    color: var(--accent-color);
+    margin-right: 5px;
+}

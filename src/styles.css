@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+    color: var(--light-color);
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --main-color: #a78abf;
+    --dark-color: #282a36;
+    --accent-color: #ed6d96;
+    --light-color: #d8c5e7;
+}
+
+html,
+body {
+    background-color: #282a36be;
+}
+
+.logo-alextina,
+h1,
+h2,
+h3 {
+    font-family: 'Varela Round', sans-serif;
+}
+
+a {
+    cursor: pointer;
+}
