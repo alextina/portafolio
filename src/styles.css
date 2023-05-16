@@ -5,6 +5,7 @@
     color: var(--light-color);
     text-decoration: none;
     list-style: none;
+    box-sizing: border-box;
 }
 
 :root {
@@ -12,20 +13,102 @@
     --dark-color: #282a36;
     --accent-color: #ed6d96;
     --light-color: #d8c5e7;
+    /* fuentes */
+    --h1-size: 36px;
+    --h2-size: 28px;
+    --h3-size: 22px;
+    --h4-size: 16px;
+    --h5-size: 14px;
+    --h6-size: 14px;
+    --p-size: 14px;
+    --a-size: 14px;
+    --small-size: 12px;
 }
 
 html,
 body {
-    background-color: #282a36be;
+    background-color: var(--dark-color);
 }
 
-.logo-alextina,
 h1,
 h2,
 h3 {
     font-family: 'Varela Round', sans-serif;
 }
 
+/* Estilos para encabezados */
+h1 {
+    font-size: var(--h1-size);
+    font-weight: 800;
+}
+
+h2 {
+    font-size: var(--h2-size);
+}
+
+h3 {
+    font-size: var(--h3-size);
+}
+
+h4 {
+    font-size: var(--h4-size);
+}
+
+h5 {
+    font-size: var(--h5-size);
+    font-weight: 600;
+}
+
+h6 {
+    font-size: var(--h6-size);
+    font-weight: 400;
+}
+
+/* Estilos para el cuerpo del texto */
+p {
+    font-size: var(--p-size);
+    line-height: 1.5em;
+}
+
 a {
+    font-size: var(--a-size);
     cursor: pointer;
+}
+
+small {
+    font-size: var(--small-size);
+}
+
+/* Estilos para listas */
+ul,
+ol {
+    font-size: var(--a-size);
+    line-height: 1.5em;
+    padding: 10px;
+}
+
+li {
+    padding: 5px 0;
+}
+
+.alextina {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.alextina div {
+    width: 30px;
+    height: 30px;
+    background-image: url('assets/alextina-photo-logo.png');
+    background-size: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.alextina h3 {
+    cursor: pointer;
+    color: var(--main-color);
+    line-height: 0;
 }
