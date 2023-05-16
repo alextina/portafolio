@@ -1,32 +1,28 @@
 <footer>
-    <section>
-        <article>
-            <h3>Navegación</h3>
-            <ul>
-                <li><a (click)="sharedSvc.goToHome()">Inicio</a></li>
-                <li><a (click)="sharedSvc.goToAboutMe()">Sobre mí</a></li>
-                <li><a (click)="sharedSvc.goToPortfolio()">Portafolio</a></li>
-            </ul>
-        </article>
-        <article>
-            <h3>Contáctame</h3>
-            <ul>
-                <li><a target="_blank" href="mailto:castilloavilaa@gmail.com">castilloavilaa@gmail.com</a></li>
-                <!-- <li><a
-                        href="https://api.whatsapp.com/send?phone=51912766650&text=Hola,%20te%20escribo%20desde%20tu%20web.">
-                    </a>WhatsApp
-                </li> -->
-                <li><a target="_blank" href="https://linkedin.com/in/alextina"><i class="fa-brands fa-linkedin"></i>
-                        LinkedIn</a></li>
-                <li><a target="_blank" href="https://github.com/alextina"><i class="fa-brands fa-github"></i>
-                        GitHub</a></li>
+    <article>
+        <h4>Navegación</h4>
+        <ul>
+            <li><a (click)="sharedSvc.goToHome()">Inicio</a></li>
+            <li><a (click)="sharedSvc.goToAboutMe()">Sobre mí</a></li>
+            <li><a (click)="sharedSvc.goToPortfolio()">Portafolio</a></li>
+        </ul>
+    </article>
+    <article>
+        <h4>Contáctame</h4>
+        <ul>
+            <li><a target="_blank" href="mailto:castilloavilaa@gmail.com">castilloavilaa@gmail.com</a></li>
+            <li><a target="_blank" href="https://linkedin.com/in/alextina"><i class="fa-brands fa-linkedin"></i>
+                    LinkedIn</a></li>
+            <li><a target="_blank" href="https://github.com/alextina"><i class="fa-brands fa-github"></i>
+                    GitHub</a></li>
 
-            </ul>
-        </article>
-        <article>
-            <h1 class="logo-alextina" (click)="sharedSvc.goToHome()"><span
-                    class="material-icons">tips_and_updates</span>alextina</h1>
-            <p>"Todo es posible en la medida que tú creas que lo es."</p>
-        </article>
-    </section>
+        </ul>
+    </article>
+    <article>
+        <section class="alextina">
+            <div></div>
+            <h3 (click)="sharedSvc.goToHome()">alextina</h3>
+        </section>
+        <p>"Todo es posible en la medida que tú creas que lo es."</p>
+    </article>
 </footer>

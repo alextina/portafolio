@@ -1,19 +1,18 @@
 <header>
-    <section>
-        <h1 class="logo-alextina" (click)="sharedSvc.goToHome()"><span
-                class=" material-icons">tips_and_updates</span>alextina
-        </h1>
-        <nav>
-            <ul class="navegation">
-                <li><a (click)="sharedSvc.goToHome()">Inicio</a></li>
-                <li><a (click)="sharedSvc.goToAboutMe()">Sobre mi</a></li>
-                <li><a (click)="sharedSvc.goToPortfolio()">Portafolio</a></li>
-                <li><a (click)="sharedSvc.goToContactMe()">Contáctame</a></li>
-            </ul>
-            <ul class="social-icons">
-                <a target="_blank" href="https://linkedin.com/in/alextina"><i class="fa-brands fa-linkedin"></i></a>
-                <a target="_blank" href="https://github.com/alextina"><i class="fa-brands fa-github"></i></a>
-            </ul>
-        </nav>
+    <section class="alextina">
+        <div></div>
+        <h3 (click)="sharedSvc.goToHome()">alextina</h3>
     </section>
+    <nav>
+        <ul class="navegation">
+            <li><a (click)="sharedSvc.goToHome()">Inicio</a></li>
+            <li><a (click)="sharedSvc.goToAboutMe()">Sobre mi</a></li>
+            <li><a (click)="sharedSvc.goToPortfolio()">Portafolio</a></li>
+            <li><a (click)="sharedSvc.goToContactMe()">Contáctame</a></li>
+        </ul>
+        <ul class="social-icons">
+            <a target="_blank" href="https://linkedin.com/in/alextina"><i class="fa-brands fa-linkedin"></i></a>
+            <a target="_blank" href="https://github.com/alextina"><i class="fa-brands fa-github"></i></a>
+        </ul>
+    </nav>
 </header>
