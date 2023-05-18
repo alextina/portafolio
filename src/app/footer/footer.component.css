@@ -5,22 +5,14 @@ footer {
     align-items: flex-start;
     justify-content: center;
     background-color: var(--dark-color);
+    /* padding: 50px 0; */
     padding: 25px 0;
+
 }
 
 article {
     width: 30%;
     padding: 0 20px;
-}
-
-p {
-    padding-left: 40px;
-    line-height: 1.75;
-}
-
-h3 {
-    margin-top: 10px;
-    margin-bottom: 15px;
 }
 
 ul {
@@ -35,17 +27,17 @@ li {
 
 .social-icons {
     width: 10px;
-    flex-direction: row;
 }
 
 
 .fa-brands {
     font-size: 15px;
-    color: var(--accent-color);
-    margin-right: 5px;
 }
 
 .material-icons {
-    color: var(--accent-color);
-    margin-right: 5px;
+    font-size: 16px;
+}
+
+.location {
+    padding: 25px;
 }

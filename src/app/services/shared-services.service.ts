@@ -15,16 +15,12 @@ export class SharedServicesService {
     this.router.navigate([''])
   }
 
-  goToAboutMe(): void {
-    this.router.navigate(['about-me'])
+  goToProjects(): void {
+    this.router.navigate(['projects'])
   }
 
-  goToPortfolio(): void {
-    this.router.navigate(['portfolio'])
-  }
-
-  goToContactMe(): void {
-    this.router.navigate(['contact-me'])
+  goToContact(): void {
+    this.router.navigate(['contact'])
   }
 
 }

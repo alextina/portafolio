@@ -3,9 +3,11 @@
         <img src="../../assets/alextina-photo.jpg" width="350px" alt="alextina-photo">
     </section>
     <section class="text-container">
-        <h1>Alejandra Cristina Castillo Avila</h1>
-        <h2>Front-End Developer</h2>
-        <div class="icons">
+        <section class="info">
+            <h1>Alejandra Cristina Castillo Avila</h1>
+            <h2>Front-End Developer</h2>
+        </section>
+        <div class="tools">
             <img src="../../assets/js.png">
             <img src="../../assets/html.png">
             <img src="../../assets/css.png">
@@ -25,5 +27,8 @@
             <img src="../../assets/zoom.png">
             <img src="../../assets/slack.png">
         </div>
+        <button (click)="this.sharedSvc.goToProjects()">
+            Proyectos
+        </button>
     </section>
 </section>
