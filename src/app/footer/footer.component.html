@@ -1,26 +1,26 @@
 <footer>
-    <article>
-        <h4>Navegación</h4>
-        <ul>
-            <li><a (click)="sharedSvc.goToHome()">Inicio</a></li>
-            <li><a (click)="sharedSvc.goToProjects()">Portafolio</a></li>
+    <section class="footer-contentainer">
+        <a target="_blank" href="mailto:castilloavilaa@gmail.com">castilloavilaa@gmail.com</a>
+        <ul class="social-links">
+            <li>
+                <a target="_blank" href="https://www.linkedin.com/in/alextina/">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+            </li>
+            <li>
+                <a target="_blank" href="https://github.com/alextina">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </li>
         </ul>
-    </article>
-    <article>
-        <h4>Contáctame</h4>
+    </section>
+    <section>
+        <p>&copy; 2023 alextina. Todos los derechos reservados.</p>
+    </section>
+    <section class="social">
         <ul>
-            <li><a target="_blank" href="mailto:castilloavilaa@gmail.com">castilloavilaa@gmail.com</a></li>
-            <li><a target="_blank" href="https://linkedin.com/in/alextina"><i class="fa-brands fa-linkedin"></i>
-                    LinkedIn</a></li>
-            <!-- <li><a target="_blank" href="https://github.com/alextina"><i class="fa-brands fa-github"></i>
-                    GitHub</a></li> -->
-
+            <li><a (click)="this.sharedSvc.goToHome()">Inicio</a></li>
+            <li><a (click)="this.sharedSvc.goToProjects()">Proyectos</a></li>
         </ul>
-    </article>
-    <article>
-        <section class="alextina">
-            <div></div>
-            <h3 (click)="sharedSvc.goToHome()">alextina</h3>
-        </section>
-    </article>
+    </section>
 </footer>
