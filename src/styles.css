@@ -6,6 +6,8 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+    border: none;
+    outline: none;
 }
 
 :root {
@@ -117,9 +119,14 @@ button {
     background-color: var(--dark-color);
     border: solid 1px var(--accent-color);
     padding: 10px;
-    width: 150px;
+    width: 125px;
     border-radius: 10px;
     cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--accent-color);
+    color: var(--dark-color);
 }
 
 .social-icons {

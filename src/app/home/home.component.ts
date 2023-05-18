@@ -12,4 +12,8 @@ export class HomeComponent {
     public sharedSvc: SharedServicesService,
   ) { }
 
+  // ngOnInit() {
+  //   window.scrollTo(0, 0);
+  // }
+
 }
