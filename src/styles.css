@@ -68,6 +68,7 @@ h6 {
 
 /* Estilos para el cuerpo del texto */
 p {
+    text-align: center;
     font-size: var(--p-size);
     line-height: 1.5em;
 }
@@ -111,7 +112,7 @@ li {
 
 .alextina h3 {
     cursor: pointer;
-    color: var(--main-color);
+    color: var(--accent-color);
     line-height: 0;
 }
 
@@ -143,10 +144,90 @@ button:hover {
     font-size: 16px;
 }
 
-@media (max-width: 750px) {
+/* projects y last-projects */
+.projects-container {
+    width: 100%;
+    min-height: 85vh;
+    height: auto;
+    padding: 50px 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
 
-    .alextina h3 {
-        color: var(--accent-color);
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.projects p {
+    color: var(--dark-color);
+    margin: 15px;
+}
+
+.info a {
+    color: var(--main-color);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.projects article {
+    width: 30%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px
+}
+
+.projects article div {
+    flex: 1 0 auto;
+    display: flex;
+    border-radius: 10px;
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.material-icons {
+    cursor: pointer;
+    font-size: 30px;
+}
+
+@media (max-width: 770px) {
+
+
+    /* projects y last-projects */
+    .projects-container {
+        gap: 50px;
     }
 
 }

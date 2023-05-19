@@ -12,6 +12,8 @@ export class LastProjectsComponent {
   projects: any[] = [];
   displayedProjects: any[] = [];
   numProjectsToShow = 3;
+  reposToShow: string[] = ['DEV003-burger-queen-api-client', 'DEV003-md-links', 'DEV003-social-network'];
+  // reposToHide: string[] = ['alextina', 'burger-queen-mock-server'];
 
   constructor(
     private githubSvc: GithubService,
@@ -29,7 +31,8 @@ export class LastProjectsComponent {
           const dateB = new Date(b.created_at);
           return dateB.getTime() - dateA.getTime();
         });
-        this.displayedProjects = this.projects.slice(0, this.numProjectsToShow);
+        this.displayedProjects = this.projects.filter(project => this.reposToShow.includes(project.name)).slice(0, this.numProjectsToShow);
+        // this.displayedProjects = this.projects.filter(project => !this.reposToHide.includes(project.name)).slice(0, this.numProjectsToShow);
       },
       error: (error) => {
         console.log(error);

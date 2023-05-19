@@ -30,7 +30,7 @@
 .info {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    align-items: flex-start;
 }
 
 h1 {
@@ -46,6 +46,12 @@ h1 {
 
 .tools img {
     width: 30px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
 }
 
 button {

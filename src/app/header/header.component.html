@@ -3,8 +3,8 @@
         <div></div>
         <h3 (click)="goHome()">alextina</h3>
     </section>
-    <nav class="nav" (click)="showNav = !showNav">
-        <span class="material-icons-round">menu</span>
+    <nav class="nav" (click)="showNav = !showNav" *ngIf="!showNav">
+        <span class=" material-icons-round">menu</span>
     </nav>
     <nav class="nav-menu" [class.show]="showNav">
         <div class="nav-content">
@@ -17,7 +17,7 @@
             <ul class="social-icons">
                 <a target="_blank" href="https://linkedin.com/in/alextina"><i class="fa-brands fa-linkedin"></i></a>
                 <a target="_blank" href="https://github.com/alextina"><i class="fa-brands fa-github"></i></a>
-                <span class="material-icons-round theme">light_mode</span>
+                <!-- <span class="material-icons-round theme">light_mode</span> -->
             </ul>
         </div>
         <div class="shadow" (click)="showNav = !showNav"></div>

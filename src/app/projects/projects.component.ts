@@ -9,6 +9,7 @@ import { GithubService } from '../services/github.service';
 export class ProjectsComponent implements OnInit {
 
   projects: any[] = [];
+  reposToHide: string[] = ['alextina'];
 
   constructor(
     private githubSvc: GithubService,
@@ -25,6 +26,7 @@ export class ProjectsComponent implements OnInit {
           const dateB = new Date(b.created_at);
           return dateB.getTime() - dateA.getTime();
         });
+        this.projects = this.projects.filter(project => !this.reposToHide.includes(project.name));
       },
       error: (error) => {
         console.log(error);
