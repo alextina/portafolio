@@ -16,17 +16,17 @@ export class HeaderComponent {
 
   goHome(): void {
     this.sharedSvc.goToHome();
-    this.showNav = !this.showNav;
+    this.showNav = false;
   }
 
   goProjects(): void {
     this.sharedSvc.goToProjects();
-    this.showNav = !this.showNav;
+    this.showNav = false;
   }
 
   goContact(): void {
     this.sharedSvc.goToContact();
-    this.showNav = !this.showNav;
+    this.showNav = false;
   }
 
 }

@@ -1,11 +1,15 @@
 <section class="projects-container">
-    <h1>Proyectos</h1>
-
+    <section class="info">
+        <h1>Proyectos</h1>
+        <p>Más información sobre estos proyectos en mi cuenta de
+            <a href="https://github.com/alextina" target="_blank">GitHub</a>.
+        </p>
+    </section>
     <section class="projects">
         <article *ngFor="let project of projects">
             <div>
                 <img [src]="getProjectImageUrl(project.name)">
-                <p>{{project.topics}}</p>
+                <p>Tecnologías: <br> {{ project.topics.join(' / ') }}</p>
             </div>
             <button (click)="openRepository(project.html_url)">Ver repositorio</button>
         </article>
