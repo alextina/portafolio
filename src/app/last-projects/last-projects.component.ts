@@ -1,17 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { GithubService } from '../services/github.service';
+import { SharedServicesService } from '../services/shared-services.service';
 
 @Component({
-  selector: 'app-projects',
-  templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.css']
+  selector: 'app-last-projects',
+  templateUrl: './last-projects.component.html',
+  styleUrls: ['./last-projects.component.css']
 })
-export class ProjectsComponent implements OnInit {
+export class LastProjectsComponent {
 
   projects: any[] = [];
+  displayedProjects: any[] = [];
+  numProjectsToShow = 3;
 
   constructor(
     private githubSvc: GithubService,
+    public sharedSvc: SharedServicesService,
   ) {
 
   }
@@ -25,6 +29,7 @@ export class ProjectsComponent implements OnInit {
           const dateB = new Date(b.created_at);
           return dateB.getTime() - dateA.getTime();
         });
+        this.displayedProjects = this.projects.slice(0, this.numProjectsToShow);
       },
       error: (error) => {
         console.log(error);

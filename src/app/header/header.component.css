@@ -11,24 +11,35 @@ header {
     padding: 0 5%;
 }
 
-nav {
-    width: 70%;
+.nav {
+    display: none;
+}
+
+.nav-menu {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    width: 50%;
+}
+
+.nav-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 50px 0;
+}
+
+.close {
+    display: none;
 }
 
 .navegation {
-    width: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
 }
 
 .navegation li {
     font-family: 'Varela Round', sans-serif;
-}
-
-.social-icons {
-    width: 10%;
 }
 
 ul {
@@ -36,6 +47,7 @@ ul {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    gap: 15px;
 }
 
 li {
@@ -61,4 +73,72 @@ li:active {
     padding: 10px;
     cursor: pointer;
     margin-top: -2px;
+}
+
+@media (max-width: 770px) {
+
+    .nav {
+        display: block;
+    }
+
+    .material-icons-round {
+        font-size: 40px;
+        color: var(--accent-color);
+        cursor: pointer;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-menu.show {
+        display: block;
+    }
+
+    .nav-content {
+        display: flex;
+        flex-direction: column;
+        padding: 50px 0;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background-color: var(--dark-color);
+        z-index: 1;
+    }
+
+    .navegation {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .shadow {
+        width: 100%;
+        height: 100%;
+        background-color: var(--dark-color);
+        opacity: 50%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 0;
+    }
+
+    ul {
+        flex-direction: column;
+        gap: +15px;
+    }
+
+    .close {
+        display: block;
+        position: fixed;
+        top: 15px;
+        right: 15px;
+    }
+
+    .theme {
+        display: none;
+    }
+
 }

@@ -1,28 +1,13 @@
 <section class="projects-container">
     <h1>Proyectos</h1>
+
     <section class="projects">
-        <span class="material-icons">arrow_back_ios</span>
-        <article>
+        <article *ngFor="let project of projects">
             <div>
-                <img src="../../assets/DEV003-md-links.png" alt="">
-                <h3>Md Links</h3>
+                <img [src]="getProjectImageUrl(project.name)">
+                <p>{{project.topics}}</p>
             </div>
-            <button>Ver repositorio</button>
+            <button (click)="openRepository(project.html_url)">Ver repositorio</button>
         </article>
-        <article>
-            <div>
-                <img src="../../assets/DEV003-md-links.png" alt="">
-                <h3>Md Links</h3>
-            </div>
-            <button>Ver repositorio</button>
-        </article>
-        <article>
-            <div>
-                <img src="../../assets/DEV003-md-links.png" alt="">
-                <h3>Md Links</h3>
-            </div>
-            <button>Ver repositorio</button>
-        </article>
-        <span class="material-icons">arrow_forward_ios</span>
     </section>
 </section>

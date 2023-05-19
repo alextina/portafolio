@@ -9,7 +9,24 @@ import { SharedServicesService } from '../services/shared-services.service';
 export class HeaderComponent {
 
   constructor(
-    public sharedSvc: SharedServicesService,
+    private sharedSvc: SharedServicesService,
   ) { }
+
+  showNav: boolean = false;
+
+  goHome(): void {
+    this.sharedSvc.goToHome();
+    this.showNav = !this.showNav;
+  }
+
+  goProjects(): void {
+    this.sharedSvc.goToProjects();
+    this.showNav = !this.showNav;
+  }
+
+  goContact(): void {
+    this.sharedSvc.goToContact();
+    this.showNav = !this.showNav;
+  }
 
 }
