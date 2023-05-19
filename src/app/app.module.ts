@@ -8,6 +8,8 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { HttpClientModule } from '@angular/common/http';
+import { LastProjectsComponent } from './last-projects/last-projects.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,13 @@ import { ProjectsComponent } from './projects/projects.component';
     FooterComponent,
     HomeComponent,
     ContactComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    LastProjectsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

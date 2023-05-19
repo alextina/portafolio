@@ -1,20 +1,25 @@
 <header>
     <section class="alextina">
         <div></div>
-        <h3 (click)="sharedSvc.goToHome()">alextina</h3>
+        <h3 (click)="goHome()">alextina</h3>
     </section>
-    <nav>
-        <ul class="navegation">
-            <li><a (click)="sharedSvc.goToHome()">Inicio</a></li>
-            <li><a (click)="sharedSvc.goToProjects()">Portafolio</a></li>
-            <li><a (click)="sharedSvc.goToContact()">Contáctame</a></li>
-        </ul>
-        <ul class="social-icons">
-            <a target="_blank" href="https://linkedin.com/in/alextina"><i class="fa-brands fa-linkedin"></i></a>
-            <a target="_blank" href="https://github.com/alextina"><i class="fa-brands fa-github"></i></a>
-        </ul>
-        <span class="material-icons theme">
-            light_mode
-        </span>
+    <nav class="nav" (click)="showNav = !showNav">
+        <span class="material-icons-round">menu</span>
+    </nav>
+    <nav class="nav-menu" [class.show]="showNav">
+        <div class="nav-content">
+            <span class="material-icons-round close" (click)="showNav = !showNav">close</span>
+            <ul class="navegation">
+                <li><a (click)="goHome()">Inicio</a></li>
+                <li><a (click)="goProjects()">Proyectos</a></li>
+                <li><a (click)="goContact()">Contáctame</a></li>
+            </ul>
+            <ul class="social-icons">
+                <a target="_blank" href="https://linkedin.com/in/alextina"><i class="fa-brands fa-linkedin"></i></a>
+                <a target="_blank" href="https://github.com/alextina"><i class="fa-brands fa-github"></i></a>
+                <span class="material-icons-round theme">light_mode</span>
+            </ul>
+        </div>
+        <div class="shadow" (click)="showNav = !showNav"></div>
     </nav>
 </header>

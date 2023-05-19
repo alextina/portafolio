@@ -12,8 +12,9 @@ export class SharedServicesService {
   ) { }
 
   goToHome(): void {
-    this.router.navigate(['/']);
+    this.router.navigate(['']);
     window.scrollTo(0, 0);
+
   }
 
   goToProjects(): void {

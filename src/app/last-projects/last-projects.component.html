@@ -1,0 +1,12 @@
+<section class="projects-container">
+    <h1>Últimos Proyectos</h1>
+    <section class="projects">
+        <article *ngFor="let project of displayedProjects" (click)="openRepository(project.html_url)">
+            <div>
+                <img [src]="getProjectImageUrl(project.name)">
+                <h3>{{ project.name }}</h3>
+            </div>
+        </article>
+    </section>
+    <button (click)="this.sharedSvc.goToProjects()">Ver todos los proyectos</button>
+</section>
