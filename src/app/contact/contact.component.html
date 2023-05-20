@@ -1,20 +1,18 @@
 <section class="contact-container">
     <h1>Contáctame</h1>
     <div class="contact-icons">
-        <i class="fa-solid fa-envelope"></i>
-        <i class="fa-brands fa-linkedin-in"></i>
-        <i class="fa-brands fa-telegram telegram"></i>
+        <a href="mailto:castilloavilaa@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://linkedin.com/in/alextina" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://t.me/alextina_pe" target="_blank"><i class="fa-brands fa-telegram telegram"></i></a>
     </div>
-    <form action="">
+    <form action="https://formsubmit.co/castilloavilaa@gmail.com" method="POST">
         <div class="data">
-            <input type="text" placeholder="Nombres">
-            <input type="text" placeholder="Apellidos">
+            <input type="text" name="name" placeholder="Nombres y Apellidos">
+            <input type="email" name="e-mail" placeholder="Correo Electrónico">
         </div>
-        <div class="data">
-            <input type="email" placeholder="Correo Electrónico">
-            <input type="text" placeholder="Asunto">
-        </div>
-        <textarea class="mensaje" placeholder="Mensaje" rows="5"></textarea>
-        <button>Enviar</button>
+        <textarea class="mensaje" name="message" placeholder="Mensaje" rows="6"></textarea>
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://alextina.pe">
+        <button type="submit">Enviar</button>
     </form>
 </section>
