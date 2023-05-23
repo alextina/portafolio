@@ -101,6 +101,12 @@ button {
     /* Borde del track */
 }
 
+button:disabled {
+    background-color: var(--dark-color);
+    color: gray;
+    border: solid 1px var(--dark-color);
+}
+
 @media (max-width: 750px) {
 
     form {
