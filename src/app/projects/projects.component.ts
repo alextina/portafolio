@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GithubService } from '../services/github.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-projects',
@@ -10,14 +11,21 @@ export class ProjectsComponent implements OnInit {
 
   projects: any[] = [];
   reposToHide: string[] = ['alextina'];
+  projectImages: { [key: string]: string } = {};
 
   constructor(
     private githubSvc: GithubService,
-  ) {
-
-  }
+    private http: HttpClient,
+  ) { }
 
   ngOnInit() {
+    this.http.get<any>('assets/data/db.json').subscribe((data) => {
+      this.projectImages = data.projects.reduce((acc: any, project: any) => {
+        acc[project.name] = project.image;
+        return acc;
+      }, {});
+    });
+
     this.githubSvc.getRepositories().subscribe({
       next: (data) => {
         this.projects = data;
@@ -31,7 +39,7 @@ export class ProjectsComponent implements OnInit {
       error: (error) => {
         console.log(error);
       },
-    })
+    });
   }
 
   openRepository(url: string) {
@@ -39,7 +47,11 @@ export class ProjectsComponent implements OnInit {
   }
 
   getProjectImageUrl(projectName: string): string {
-    return `https://opengraph.githubassets.com/1/alextina/${projectName}`;
+    const imageUrl = this.projectImages[projectName];
+    if (imageUrl) {
+      return imageUrl;
+    } else {
+      return `https://opengraph.githubassets.com/1/alextina/${projectName}`;
+    }
   }
-
 }

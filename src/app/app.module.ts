@@ -10,6 +10,8 @@ import { ContactComponent } from './contact/contact.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LastProjectsComponent } from './last-projects/last-projects.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { SentMessageComponent } from './sent-message/sent-message.component'
 
 @NgModule({
   declarations: [
@@ -19,12 +21,14 @@ import { LastProjectsComponent } from './last-projects/last-projects.component';
     HomeComponent,
     ContactComponent,
     ProjectsComponent,
-    LastProjectsComponent
+    LastProjectsComponent,
+    SentMessageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

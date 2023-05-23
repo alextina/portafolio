@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
     public sharedSvc: SharedServicesService,
   ) { }
 
-  jobTittles: string[] = ['FrontEnd Web Developer', 'Egresada de Laboratoria', 'Mamá de Bianka 🐶, Tsukimi 🐱 y Yami 🐱', 'Tejedora a crochet', 'Amante del cine']
+  jobTittles: string[] = ['FrontEnd Web Developer', 'Egresada de Laboratoria', /*'Mamá de Bianka 🐶, Tsukimi 🐱 y Yami 🐱', 'Tejedora a crochet', 'Amante del cine'*/]
   currentJobIndex: number = 0;
 
   ngOnInit() {
