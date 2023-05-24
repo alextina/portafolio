@@ -173,6 +173,11 @@ h1 {
     margin: 15px;
 }
 
+.projects h4 {
+    color: var(--dark-color);
+    margin-top: 15px;
+}
+
 .info a {
     color: var(--main-color);
 }

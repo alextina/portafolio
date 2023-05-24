@@ -9,6 +9,8 @@
         <article *ngFor="let project of projects">
             <div>
                 <img [src]="getProjectImageUrl(project.name)">
+                <!-- <h4>{{ project.name.toUpperCase() }}</h4> -->
+                <h4>{{ project.name }}</h4>
                 <p>Tecnologías: <br> {{ project.topics.join(' / ') }}</p>
             </div>
             <button (click)="openRepository(project.html_url)">Ver repositorio</button>

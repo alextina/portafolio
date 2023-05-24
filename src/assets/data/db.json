@@ -2,11 +2,11 @@
     "projects": [
         {
             "name": "dermatovet",
-            "image": ""
+            "image": "https://raw.githubusercontent.com/alextina/portafolio/main/src/assets/projects-img/dermatovet.png"
         },
         {
             "name": "portafolio",
-            "image": ""
+            "image": "https://raw.githubusercontent.com/alextina/portafolio/main/src/assets/projects-img/alextina.png"
         },
         {
             "name": "alextina",
@@ -14,31 +14,31 @@
         },
         {
             "name": "burger-queen-mock-server",
-            "image": ""
+            "image": "https://raw.githubusercontent.com/alextina/portafolio/main/src/assets/projects-img/bq-mock-server.png"
         },
         {
             "name": "DEV003-burger-queen-api-client",
-            "image": ""
+            "image": "https://raw.githubusercontent.com/alextina/portafolio/main/src/assets/projects-img/burger-queen-api-client.png"
         },
         {
             "name": "DEV003-md-links",
-            "image": ""
+            "image": "https://raw.githubusercontent.com/alextina/portafolio/main/src/assets/projects-img/md-links.png"
         },
         {
             "name": "ToDo-Firebase-V9",
-            "image": ""
+            "image": "https://raw.githubusercontent.com/alextina/portafolio/main/src/assets/projects-img/todo-app.png"
         },
         {
             "name": "DEV003-social-network",
-            "image": ""
+            "image": "https://raw.githubusercontent.com/alextina/portafolio/main/src/assets/projects-img/social-network.png"
         },
         {
             "name": "DEV003-data-lovers",
-            "image": ""
+            "image": "https://raw.githubusercontent.com/alextina/portafolio/main/src/assets/projects-img/data-lovers.png"
         },
         {
             "name": "DEV003-card-validation",
-            "image": ""
+            "image": "https://raw.githubusercontent.com/alextina/portafolio/main/src/assets/projects-img/burger-queen-api-client.png"
         }
     ]
 }
