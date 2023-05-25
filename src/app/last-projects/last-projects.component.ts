@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { GithubService } from '../services/github.service';
 import { SharedServicesService } from '../services/shared-services.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-last-projects',
@@ -14,15 +15,24 @@ export class LastProjectsComponent {
   numProjectsToShow = 3;
   reposToShow: string[] = ['DEV003-burger-queen-api-client', 'DEV003-md-links', 'DEV003-social-network'];
   // reposToHide: string[] = ['alextina', 'burger-queen-mock-server'];
+  projectImages: { [key: string]: string } = {};
 
   constructor(
     private githubSvc: GithubService,
     public sharedSvc: SharedServicesService,
+    private http: HttpClient,
   ) {
 
   }
 
   ngOnInit() {
+    this.http.get<any>('assets/data/db.json').subscribe((data) => {
+      this.projectImages = data.projects.reduce((acc: any, project: any) => {
+        acc[project.name] = project.image;
+        return acc;
+      }, {});
+    });
+
     this.githubSvc.getRepositories().subscribe({
       next: (data) => {
         this.projects = data;
@@ -45,7 +55,12 @@ export class LastProjectsComponent {
   }
 
   getProjectImageUrl(projectName: string): string {
-    return `https://opengraph.githubassets.com/1/alextina/${projectName}`;
+    const imageUrl = this.projectImages[projectName];
+    if (imageUrl) {
+      return imageUrl;
+    } else {
+      return `https://opengraph.githubassets.com/1/alextina/${projectName}`;
+    }
   }
 
 }

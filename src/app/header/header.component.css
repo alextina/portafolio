@@ -50,17 +50,16 @@ ul {
     gap: 15px;
 }
 
-li {
+a {
     cursor: pointer;
+}
+
+.navegation a {
     padding: 10px;
 }
 
-li:hover {
-    color: var(--main-color);
-}
-
-li:active {
-    color: var(--accent-color);
+.navegation a:hover {
+    border-bottom: 1px solid var(--accent-color);
 }
 
 .fa-brands {
