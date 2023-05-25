@@ -54,4 +54,5 @@ export class ProjectsComponent implements OnInit {
       return `https://opengraph.githubassets.com/1/alextina/${projectName}`;
     }
   }
+
 }
