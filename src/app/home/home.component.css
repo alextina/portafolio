@@ -33,10 +33,6 @@
     align-items: flex-start;
 }
 
-h1 {
-    color: var(--main-color);
-}
-
 h3 {
     max-width: 90%;
     text-align: center;

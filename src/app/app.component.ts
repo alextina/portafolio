@@ -13,9 +13,9 @@ export class AppComponent implements OnInit {
   showHeader = true;
   showFooter = true;
 
-  constructor(
-    private sharedSvc: SharedServicesService,
-  ) { }
+  isDarkMode: boolean = false;
+
+  constructor(private sharedSvc: SharedServicesService) { }
 
   ngOnInit(): void {
     this.sharedSvc.showHeader$.subscribe(showHeader => {
@@ -25,6 +25,22 @@ export class AppComponent implements OnInit {
     this.sharedSvc.showFooter$.subscribe(showFooter => {
       this.showFooter = showFooter;
     })
+
+    this.sharedSvc.darkMode$.subscribe(darkMode => {
+      this.isDarkMode = darkMode;
+      this.updateBodyClass();
+    })
+  }
+
+  updateBodyClass(): void {
+    const body = document.getElementById('body');
+    if (this.isDarkMode) {
+      body?.classList.remove('light-mode');
+      body?.classList.add('dark-mode');
+    } else {
+      body?.classList.remove('dark-mode');
+      body?.classList.add('light-mode');
+    }
   }
 
 }
