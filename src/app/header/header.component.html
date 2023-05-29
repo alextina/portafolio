@@ -4,11 +4,11 @@
         <h3 (click)="goHome()">alextina</h3>
     </section>
     <nav class="nav" (click)="showNav = !showNav" *ngIf="!showNav">
-        <span class=" material-icons-round">menu</span>
+        <span class=" material-icons-round icon">menu</span>
     </nav>
     <nav class="nav-menu" [class.show]="showNav">
         <div class="nav-content">
-            <span class="material-icons-round close" (click)="showNav = !showNav">close</span>
+            <span class="material-icons-round close icon" (click)="showNav = !showNav">close</span>
             <ul class="navegation">
                 <li><a (click)="goHome()">Inicio</a></li>
                 <li><a (click)="goProjects()">Proyectos</a></li>
@@ -17,7 +17,9 @@
             <ul class="social-icons">
                 <a target="_blank" href="https://linkedin.com/in/alextina"><i class="fa-brands fa-linkedin"></i></a>
                 <a target="_blank" href="https://github.com/alextina"><i class="fa-brands fa-github"></i></a>
-                <!-- <span class="material-icons-round theme">light_mode</span> -->
+                <a (click)="toggleDarkMode()">
+                    <span class="material-icons-round mode">{{ isDarkMode ? 'light_mode' : 'dark_mode'}}</span>
+                </a>
             </ul>
         </div>
         <div class="shadow" (click)="showNav = !showNav"></div>

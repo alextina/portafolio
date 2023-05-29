@@ -10,10 +10,6 @@
     gap: 50px;
 }
 
-h1 {
-    color: var(--accent-color);
-}
-
 .contact-icons {
     display: flex;
     flex-direction: row;
@@ -24,22 +20,21 @@ h1 {
 .fa-brands {
     width: 30px;
     height: 30px;
-    background-color: var(--main-color);
+    background-color: var(--accent-color);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--dark-color);
+    color: var(--bg-color);
 }
 
 .fa-telegram {
-    color: var(--red-color);
     font-size: 30px;
 }
 
 .telegram {
-    color: var(--main-color);
-    background-color: var(--dark-color);
+    color: var(--accent-color);
+    background-color: var(--bg-color);
 }
 
 form {
@@ -62,8 +57,9 @@ input {
     width: 50%;
     border-radius: 10px;
     padding: 15px;
-    background-color: var(--light-color);
-    color: var(--dark-color);
+    background-color: white;
+    /* border: 1px solid var(--accent-color); */
+    color: var(--font-color-2);
     font-size: var(--p-size);
 }
 
@@ -71,8 +67,9 @@ textarea {
     width: 100%;
     border-radius: 10px;
     padding: 15px;
-    background-color: var(--light-color);
-    color: var(--dark-color);
+    background-color: white;
+    /* border: 1px solid var(--accent-color); */
+    color: var(--font-color-2);
     font-size: var(--p-size);
     resize: none;
 }
