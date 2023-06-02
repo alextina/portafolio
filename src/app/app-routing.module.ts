@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
-import { SentMessageComponent } from './sent-message/sent-message.component';
 
 const routes: Routes = [
   {
@@ -17,11 +16,6 @@ const routes: Routes = [
   {
     path: 'contact',
     component: ContactComponent,
-  },
-  {
-    path: 'sent-message',
-    component: SentMessageComponent,
-    data: { showHeader: false, showFooter: false }
   }
 ];
 
