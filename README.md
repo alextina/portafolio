@@ -8,12 +8,12 @@ Este es mi portafolio personal, donde muestro mis proyectos y habilidades como d
 
 ## Índice
 
-1. [Tecnologías utilizadas](#2-tecnologías-utilizadas)
-2. [Características del portafolio](#3-características-del-portafolio)
-3. [Historias de Usuario](#4-historias-de-usuario)
-4. [Contácto](#5-contacto)
+1. [Tecnologías utilizadas](#1-tecnologías-utilizadas)
+2. [Características del portafolio](#2-características-del-portafolio)
+3. [Historias de Usuario](#3-historias-de-usuario)
+4. [Contácto](#4-contacto)
 
-## 2. Tecnologías utilizadas
+## 1. Tecnologías utilizadas
 - Angular: Un framework de desarrollo web utilizado para construir la interfaz de usuario del portafolio.
 - HTML: Lenguaje de marcado utilizado para estructurar y presentar el contenido del sitio web.
 - CSS: Lenguaje de estilos utilizado para dar estilo y diseño al portafolio.
@@ -22,14 +22,15 @@ Este es mi portafolio personal, donde muestro mis proyectos y habilidades como d
 - FontAwesome: Una biblioteca de iconos utilizada para mostrar iconos de contacto en el portafolio.
 - FormSubmit.co: Servicio utilizado para enviar los formularios de contacto desde el portafolio.
 
-## 3. Características del portafolio
+## 2. Características del portafolio
 1. Página de inicio: En la parte iniciar se puede ver mi nombre, mi puesto y las tenologías que manejo. Tiene 2 componentes más: La sección "Ultimos Proyectos" con los últimos 3 proyectos desarrollados en Laboratoria. Y la sección de "Contacto".
 2. Sección "Proyectos": Muestra todos los proyectos en los que he trabajado, con enlaces a los repositorios, con sus nombres y las tenologías que se usaron en cada uno.
 3. Sección "Contacto": Permite a los visitantes del portafolio ponerse en contacto conmigo a través de un formulario. Este formulario cuenta con validaciones, muestra el estado del envío, y se limpia cuando ya ha sido enviado.
 4. Diseño responsive: Se adapta a diferentes tamaños de pantalla y dispositivos.
 5. Modo claro/oscuro: El portafolio ofrece la opción de cambiar entre los modos claro y oscuro para adaptarse a las preferencias del usuario.
 
-## 4. Historias de Usuario
+## 3. Historias de Usuario
+
 ### 1. Como visitante, quiero ver una página de inicio atractiva con una introducción clara y enlaces a otras secciones del portafolio.
 
 - Definición de "terminado": La página de inicio se muestra correctamente con una introducción y enlaces funcionales.
@@ -63,9 +64,9 @@ Este es mi portafolio personal, donde muestro mis proyectos y habilidades como d
     - La selección del modo persiste para futuras visitas del usuario.
 
 
-## 5. Contácto
+## 4. Contacto
 
-- LinkedIn: [Mi perfil de LinkedIn](https://linkedin.com/in/alextina)
-- Portafolio: [Visita mi sitio web](https://www.alextina.pe)
+- LinkedIn: [www.linkedin.com/in/alextina](https://linkedin.com/in/alextina)
+- Portafolio: [www.alextina.pe](https://alextina.pe)
 
 Puedes encontrar más información sobre mi experiencia, proyectos y habilidades en estos enlaces. ¡No dudes en contactarme o seguirme en LinkedIn para mantenernos en contacto!
