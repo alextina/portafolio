@@ -14,7 +14,7 @@ Este es mi portafolio personal, donde muestro mis proyectos y habilidades como d
 4. [Contácto](#5-contacto)
 
 ## 2. Tecnologías utilizadas
-Angular: Un framework de desarrollo web utilizado para construir la interfaz de usuario del portafolio.
+- Angular: Un framework de desarrollo web utilizado para construir la interfaz de usuario del portafolio.
 - HTML: Lenguaje de marcado utilizado para estructurar y presentar el contenido del sitio web.
 - CSS: Lenguaje de estilos utilizado para dar estilo y diseño al portafolio.
 - TypeScript: Un superset de JavaScript utilizado en el desarrollo de aplicaciones Angular.
