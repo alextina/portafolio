@@ -74,10 +74,6 @@ textarea {
     resize: none;
 }
 
-button {
-    align-self: flex-end;
-}
-
 /* Personalización del scroll */
 .mensaje::-webkit-scrollbar {
     width: 10px;
@@ -102,6 +98,37 @@ button:disabled {
     background-color: var(--dark-color);
     color: gray;
     border: solid 1px var(--dark-color);
+}
+
+.contact-footer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.error {
+    font-size: var(--p-size);
+    color: var(--accent-color);
+    text-align: left;
+}
+
+.sending-message {
+    font-size: var(--p-size);
+    text-align: left;
+    color: var(--font-color-1);
+}
+
+.success-message {
+    font-size: var(--p-size);
+    text-align: left;
+    color: var(--font-color-1);
+}
+
+.sent-button {
+    width: auto;
+    padding-left: 20px;
 }
 
 @media (max-width: 750px) {

@@ -1,3 +1,4 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable, } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
@@ -21,7 +22,8 @@ export class SharedServicesService {
 
   private readonly darkModeLocalStorageKey = 'darkMode';
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private http: HttpClient) {
+    // cambiar modo - tema
     const storedDarkMode = localStorage.getItem(this.darkModeLocalStorageKey);
     if (storedDarkMode !== null) {
       this.darkModeSubject.next(storedDarkMode === 'true');
@@ -35,6 +37,27 @@ export class SharedServicesService {
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
       this.updateDarkMode(event.matches);
     });
+  }
+
+  // para enviar mail
+  sendContactForm(formData: any) {
+    const url = 'https://formsubmit.co/castilloavilaa@gmail.com';
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/x-www-form-urlencoded'
+      })
+    };
+    return this.http.post(url, this.serializeFormData(formData), httpOptions);
+  }
+
+  private serializeFormData(formData: any): string {
+    const params = new URLSearchParams();
+    for (const key in formData) {
+      if (formData.hasOwnProperty(key)) {
+        params.set(key, formData[key]);
+      }
+    }
+    return params.toString();
   }
 
   // para ocultar header y footer

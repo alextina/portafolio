@@ -5,14 +5,22 @@
         <a href="https://linkedin.com/in/alextina" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
         <a href="https://t.me/alextina_pe" target="_blank"><i class="fa-brands fa-telegram telegram"></i></a>
     </div>
-    <form action="https://formsubmit.co/castilloavilaa@gmail.com" method="POST">
+    <form (ngSubmit)="onSubmit()">
         <div class="data">
-            <input type="text" name="name" placeholder="Nombres y Apellidos" required>
-            <input type="email" name="email" placeholder="Correo Electrónico" required>
+            <input type="text" name="name" placeholder="Nombres y Apellidos" [(ngModel)]="form.name" required>
+            <input type="email" name="email" placeholder="Correo Electrónico" [(ngModel)]="form.email" required>
         </div>
-        <textarea class="mensaje" name="message" placeholder="Mensaje" rows="6" required></textarea>
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://alextina.pe/sent-message">
-        <button type="submit">Enviar</button>
+        <textarea class="mensaje" name="message" placeholder="Mensaje" rows="6" [(ngModel)]="form.message" required>
+        </textarea>
+        <div class="contact-footer">
+            <div>
+                <div class="sending-message" *ngIf="sending">Enviando...</div>
+                <div class="error" *ngIf="formError">{{ formError }}</div>
+                <div class="success-message" *ngIf="messageSent">Mensaje enviado.</div>
+            </div>
+            <div class="sent-button">
+                <button type="submit" [disabled]="sending">Enviar</button>
+            </div>
+        </div>
     </form>
 </section>
