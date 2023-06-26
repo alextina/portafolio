@@ -39,27 +39,6 @@ export class SharedServicesService {
     });
   }
 
-  // para enviar mail
-  sendContactForm(formData: any) {
-    const url = 'https://formsubmit.co/castilloavilaa@gmail.com';
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/x-www-form-urlencoded'
-      })
-    };
-    return this.http.post(url, this.serializeFormData(formData), httpOptions);
-  }
-
-  private serializeFormData(formData: any): string {
-    const params = new URLSearchParams();
-    for (const key in formData) {
-      if (formData.hasOwnProperty(key)) {
-        params.set(key, formData[key]);
-      }
-    }
-    return params.toString();
-  }
-
   // para ocultar header y footer
   updateShowHeader(showHeader: boolean): void {
     this.showHeaderSubject.next(showHeader);
