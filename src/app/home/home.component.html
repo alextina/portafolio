@@ -4,35 +4,14 @@
     </section>
     <section class="text-container">
         <section class="info">
-            <h1>Alejandra Cristina Castillo Avila</h1>
-            <h3>{{jobTittles[currentJobIndex]}}</h3>
+            <h1>Alejandra Castillo</h1>
+            <h3>Front-End Web Developer</h3>
         </section>
         <div class="tools">
-            <img src="../../assets/js.png">
-            <img src="../../assets/html.png">
-            <img src="../../assets/css.png">
-            <img src="../../assets/ts.png">
-            <img src="../../assets/nodejs.png">
-            <img src="../../assets/angular.png">
-            <img src="../../assets/firebase.png">
-            <img src="../../assets/jest.png">
-            <img src="../../assets/cmder.png">
-            <img src="../../assets/vs-code.png">
-            <img src="../../assets/replit.png">
-            <img src="../../assets/git.png">
-            <img src="../../assets/github.png">
-            <img src="../../assets/figma.png">
-            <img src="../../assets/ps.png">
-            <img src="../../assets/ai.png">
-            <img src="../../assets/zoom.png">
-            <img src="../../assets/slack.png">
+            <img *ngFor="let tech of techList" [src]="tech" alt="tech">
         </div>
         <div class="buttons">
             <button (click)="this.sharedSvc.goToProjects()">Ver proyectos</button>
-            <button
-                (click)="openCv('https://drive.google.com/file/d/1BYfMPLaDhDeOPPNOgUzTtzYeqTU5eKhj/view?usp=sharing')">
-                Descargar CV
-            </button>
         </div>
     </section>
 </section>

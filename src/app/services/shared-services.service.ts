@@ -22,6 +22,26 @@ export class SharedServicesService {
 
   private readonly darkModeLocalStorageKey = 'darkMode';
 
+  private techList: string[] = [
+    '../../assets/js.png',
+    '../../assets/ts.png',
+    '../../assets/html.png',
+    '../../assets/css.png',
+    '../../assets/vue.png',
+    '../../assets/vuetify.png',
+    '../../assets/quasar.png',
+    '../../assets/angular.png',
+    '../../assets/nodejs.png',
+    '../../assets/firebase.png',
+    '../../assets/cmder.png',
+    '../../assets/vs-code.png',
+    '../../assets/git.png',
+    '../../assets/github.png',
+    '../../assets/figma.png',
+    '../../assets/ps.png',
+    '../../assets/ai.png',
+  ];
+
   constructor(private router: Router, private http: HttpClient) {
     // cambiar modo - tema
     const storedDarkMode = localStorage.getItem(this.darkModeLocalStorageKey);
@@ -68,6 +88,10 @@ export class SharedServicesService {
   goToContact(): void {
     this.router.navigate(['contact']);
     window.scrollTo(0, 0);
+  }
+
+  getTechList(): string[] {
+    return this.techList;
   }
 
 }
